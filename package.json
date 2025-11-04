@@ -6,11 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build", // This runs the build and creates the 'dist' folder
+    "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build", // This correctly calls the existing 'build' command
-    "deploy": "gh-pages -d dist" // This now points to the 'dist' folder
-  },
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
