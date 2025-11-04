@@ -1,13 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>linksprout</title>
-  </head>
+    <title>LinkSprout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Anton&family=Arvo:wght@400;700&family=Bebas+Neue&family=Bitter:wght@400;700&family=Caveat&family=Comfortaa:wght@400;700&family=Cousine&family=Crimson+Text:wght@400;700&family=Dancing+Script:wght@400;700&family=Exo+2:wght@400;700&family=Fjalla+One&family=Indie+Flower&family=Inconsolata&family=Inter:wght@400;500;600;700&family=Josefin+Sans:wght@400;700&family=Lato:wght@400;700&family=Lobster&family=Lora:wght@400;700&family=Merriweather&family=Montserrat:wght@400;700&family=Mukta:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&family=PT+Sans:wght@400;700&family=PT+Serif&family=Pacifico&family=Patrick+Hand&family=Permanent+Marker&family=Playfair+Display:wght@700&family=Poppins:wght@500&family=Quicksand:wght@400;700&family=Raleway:wght@400;700&family=Righteous&family=Roboto+Mono&family=Roboto+Slab:wght@500&family=Roboto:wght@400;700&family=Rubik:wght@400;700&family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&family=Space+Mono&family=Special+Elite&family=Staatliches&family=Teko:wght@400;700&family=Ubuntu:wght@400;700&family=Vollkorn:wght@400;700&family=Work+Sans:wght@400;700&family=Yanone+Kaffeesatz:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      body {
+        transition: background 0.5s ease-in-out;
+        font-family: 'Inter', sans-serif;
+      }
+      body.modal-open {
+        overflow: hidden;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .dragging { opacity: 0.4; transform: scale(1.05); }
+
+      /* --- Custom Hover Animations --- */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes pulse-slow {
+        50% { transform: scale(1.04); }
+      }
+      .hover-pulse:hover { animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+      @keyframes glow {
+        0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.2); }
+        50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.6); }
+      }
+      .hover-glow:hover { animation: glow 3s ease-in-out infinite; }
+
+      @keyframes bounce-on-hover {
+        0%, 100% {
+            transform: translateY(-25%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+            transform: translateY(0);
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+      }
+      .hover-bounce:hover { animation: bounce-on-hover 1s infinite; }
+
+      /* --- New Landing Page Styles --- */
+      .comparison-table::-webkit-scrollbar {
+        height: 6px;
+      }
+      .comparison-table::-webkit-scrollbar-track {
+        background: #2a2a2b;
+        border-radius: 3px;
+      }
+      .comparison-table::-webkit-scrollbar-thumb {
+        background: #4a4a4a;
+        border-radius: 3px;
+      }
+      .comparison-table::-webkit-scrollbar-thumb:hover {
+        background: #6a6a6a;
+      }
+
+      .btn-glow-on-hover:hover {
+        box-shadow: 0 0 15px 0 rgba(0, 255, 163, 0.5);
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>

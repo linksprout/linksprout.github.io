@@ -1,0 +1,5 @@
+{
+  "name": "LinkSprout",
+  "description": "A web application that allows users to create and customize a personal link-in-bio style page. Features include draggable elements, live editing, color and font customization, and the ability to save, load, and download the generated site.",
+  "requestFramePermissions": []
+}
